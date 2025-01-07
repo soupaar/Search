@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google Image Search</title>
+    <style>
+        body {
+            background-color: #ffffff; 
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+        }
+
+        #prompt {
+            margin-top: 400px; 
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center; 
+            gap: 15px; 
+        }
+
+        #prompt input[type="text"] {
+            width: 600px;
+            padding: 10px;
+            background-color:  #f8f8f8;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #prompt input[type="submit"] {
+            padding: 16px 24px; 
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif; 
+            cursor: pointer;
+            background-color: #4285f4;
+            border: 2px solid #ccc; 
+            border-radius: 5px;
+            color: white;
+        }
+
+        #prompt input[type="submit"]:hover {
+            background-color: #357ae8;
+            color: darkgray;
+        }
+
+        #links {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-align: left;
+        }
+
+        #links a {
+            color: rgb(30, 19, 6);
+            font-size: 14px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 10px; 
+        }
+
+        #links a:hover {
+            color: #0066cc; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="links">
+        <!-- Links to other pages -->
+        <a href="index.html">Google Search</a>
+    </div>
+
+    <form action="https://www.google.com/search" method="get">
+        <div id="prompt">
+            <input type="text" name="q" id="search-input" placeholder="Search for images" required>
+            <!-- redirect the search to Google Images -->
+            <input type="hidden" name="tbm" value="isch">
+            <input type="submit" value="Google Image Search">
+        </div>
+    </form>
+    
+</body>
+</html>

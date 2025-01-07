@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <style>
+            #prompt {
+                margin-top: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center; 
+                gap: 15px; 
+            }
+
+            #prompt input[type="text"] {
+                width: 600px; 
+                padding: 10px;
+                background-color:  #f8f8f8;
+                font-size: 16px;
+                border: 2px solid #ccc; 
+                border-radius: 5px; 
+            }
+
+            #prompt input[type="submit"] {
+                padding: 16px 24px; 
+                font-size: 18px;
+                font-family: 'Times New Roman', Times, serif; 
+                cursor: pointer;
+                background-color: #4285f4;
+                border: 2px solid #ccc; 
+                border-radius: 5px; 
+                color: white; 
+            }
+
+            #prompt input[type="submit"]:hover {
+                background-color: #ddd; 
+                color: darkgray; 
+            }
+
+            #links {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                text-align: left;
+            }
+
+            #links a {
+                color: rgb(30, 19, 6);
+                font-size: 14px;
+                font-family: 'Times New Roman', Times, serif;
+                margin-left: 10px; 
+            }
+
+            #links a:hover {
+                color: #0066cc; 
+            }
+
+            body {
+                background-color: #ffffff; 
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif; 
+            }
+        </style>
+    </head>
+    <body>
+        <form action="https://www.google.com/search" method="get">
+            <div id="prompt">
+                <!-- All these words: -->
+                <div>
+                    <label for="q">All these words:</label>
+                    <input type="text" name="q" id="q" placeholder="Enter words you want to find" required>
+                </div>
+                
+                <!-- This exact word or phrase: -->
+                <div>
+                    <label for="as_q">This exact word or phrase:</label>
+                    <input type="text" name="as_q" id="as_q" placeholder="Exact phrase">
+                </div>
+
+                <!-- Any of these words: -->
+                <div>
+                    <label for="as_any">Any of these words:</label>
+                    <input type="text" name="as_any" id="as_any" placeholder="Any of the words">
+                </div>
+
+                <!-- None of these words: -->
+                <div>
+                    <label for="as_not">None of these words:</label>
+                    <input type="text" name="as_not" id="as_not" placeholder="Exclude specific words">
+                </div>
+
+                <!-- Google Search Button -->
+                <input type="submit" value="Google Search">
+            </div>
+        </form>
+
+        <div id="links">
+            <!-- Links to other pages -->
+            <a href="index.html">Google Search</a>
+        </div>
+    </body>
+</html>
